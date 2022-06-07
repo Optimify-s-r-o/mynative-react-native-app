@@ -1,11 +1,11 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { RootTabParamList, RootTabScreenProps } from '../../navigation/types';
-import useColorScheme from '../../hooks/useColorScheme';
-import TabOneScreen from '../../screens/TabOneScreen';
+import { RootTabParamList, RootTabScreenProps } from 'navigation/types';
+import useColorScheme from 'hooks/useColorScheme';
+import TabOneScreen from 'screens/TabOneScreen';
 import { FontAwesome } from '@expo/vector-icons';
-import TabTwoScreen from '../../screens/TabTwoScreen';
+import TabTwoScreen from 'screens/TabTwoScreen';
 import * as React from 'react';
-import { Routes } from '../../constants/routes';
+import { Routes } from 'constants/routes';
 
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 

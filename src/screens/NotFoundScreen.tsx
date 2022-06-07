@@ -1,14 +1,10 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-import { RootStackScreenProps } from '../navigation/types';
+import { RootStackScreenProps } from 'navigation/types';
 
 export default function NotFoundScreen({ navigation }: RootStackScreenProps<'NotFound'>) {
-  return (
-    <View style={styles.container}>
-
-    </View>
-  );
+  return <View style={styles.container}></View>;
 }
 
 const styles = StyleSheet.create({

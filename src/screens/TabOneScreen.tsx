@@ -1,14 +1,10 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import { RootTabScreenProps } from '../navigation/types';
+import { RootTabScreenProps } from 'navigation/types';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
-  return (
-    <View style={styles.container}>
-
-    </View>
-  );
+  return <View style={styles.container}></View>;
 }
 
 const styles = StyleSheet.create({

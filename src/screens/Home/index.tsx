@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {Screen} from "./../../screens/Home/components/Screen";
+import { Screen } from 'screens/Home/components/Screen';
 
 export const HomePage = () => {
   {
@@ -33,7 +33,5 @@ export const HomePage = () => {
      </@MyNativeFunctions>
      **/
   }
-  return (
-   <Screen/>
-  );
+  return <Screen />;
 };
