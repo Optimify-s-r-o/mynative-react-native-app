@@ -1,27 +1,17 @@
-import { Button, Text, View } from 'react-native';
 import React from 'react';
+import { Text, View } from 'react-native';
 import { styles } from '../styles';
 import { Routes } from 'navigation/routes';
 import { Navigation } from 'screens/components/Navigation';
 import { useThemeContext } from 'context/Theme/ThemeContext';
-import { useForm } from 'react-hook-form';
-import { TextInput } from 'plugins/MyNativeForm/TextInput';
+import { TextInput } from 'plugins/MyNativeForm/components/TextInput';
+import { Form } from 'plugins/MyNativeForm/components/Form';
 
 export const Screen = () => {
   const theme = useThemeContext();
-
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    defaultValues: {
-      email: '',
-      password: '',
-    },
-  });
   const onSubmit = (data: any) => {
-    // TODO
+    alert(JSON.stringify(data));
+    // TODO your implementation
   };
 
   return (
@@ -34,15 +24,40 @@ export const Screen = () => {
 
       <Text>SignIn</Text>
 
-      <TextInput control={control} name="email" label="Email" errors={errors} />
-      <TextInput
-        control={control}
-        name="password"
-        label="Password"
-        errors={errors}
-        type="password"
+      <Form
+        fields={{
+          email: {
+            default: '',
+            render: (props) => (
+              <TextInput
+                label="Email"
+                type="email"
+                {...props}
+                rules={{
+                  required: 'You must enter valid email address.',
+                  pattern: {
+                    value:
+                      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: 'You must enter valid email address.',
+                  },
+                }}
+              />
+            ),
+          },
+          password: {
+            default: '',
+            render: (props) => (
+              <TextInput
+                label="Password"
+                type="password"
+                {...props}
+                rules={{ required: 'You must enter password.' }}
+              />
+            ),
+          },
+        }}
+        onSubmit={onSubmit}
       />
-      <Button title="Submit" onPress={handleSubmit(onSubmit)} />
 
       <Navigation to={Routes.SignUp} title={'SignUp'} />
 
