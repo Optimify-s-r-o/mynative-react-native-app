@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Screen } from './components/Screen';
+import { useState } from 'react';
+import { Screen } from 'screens/Home/components/Screen';
 
-const SignIn = () => {
+export const HomePage = () => {
   {
     /**
      Please don't delete this comment block.
@@ -35,5 +35,3 @@ const SignIn = () => {
   }
   return <Screen />;
 };
-
-export default SignIn;

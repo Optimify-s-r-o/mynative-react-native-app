@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "source": [
     {
-      "file": "ModalProvider.tsx",
-      "exportName": "ModalProvider",
-      "target": "MyNativeGlobalContext"
+      "type": "GlobalContext",
+      "source": "./Modal",
+      "provider": "ModalProvider"
+    },
+    {
+      "type": "UsePageContext",
+      "source": "./Modal",
+      "context": "ModalContext",
+      "useContext": "useModalContext"
     }
   ],
   "dependencies": {

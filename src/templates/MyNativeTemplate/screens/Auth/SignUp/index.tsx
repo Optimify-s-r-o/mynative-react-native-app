@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Screen } from './components/Screen';
 
-const SignIn = () => {
+const Page = () => {
   {
     /**
      Please don't delete this comment block.
@@ -36,4 +36,4 @@ const SignIn = () => {
   return <Screen />;
 };
 
-export default SignIn;
+export default Page;

@@ -1,18 +1,34 @@
-import { Dimensions, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-export const styles = StyleSheet.create({
+export const Colors = {
+  dark: 'black',
+  light: 'white',
+};
+
+const baseContainerStyles = {
+  flex: 1,
+};
+
+const baseBoxStyles = {};
+
+export const lightStyleSheet = StyleSheet.create({
   container: {
-    flex: 1, alignItems: 'center', justifyContent: 'center',
-  }, header: {}, body: {}, footer: {},
+    ...baseContainerStyles,
+    backgroundColor: Colors.light,
+  },
+  box: {
+    ...baseBoxStyles,
+    borderColor: Colors.dark,
+  },
 });
 
-const width = Dimensions.get('window').width;
-const height = Dimensions.get('window').height;
-
-export const layout = {
-  window: {
-    width,
-    height,
+export const darkStyleSheet = StyleSheet.create({
+  container: {
+    ...baseContainerStyles,
+    backgroundColor: Colors.dark,
   },
-  isSmallDevice: width < 375,
-};
+  box: {
+    ...baseBoxStyles,
+    borderColor: Colors.light,
+  },
+});

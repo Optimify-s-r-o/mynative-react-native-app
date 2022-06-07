@@ -1,7 +1,31 @@
 import React, { useState } from 'react';
 import { Screen } from './components/Screen';
 
+{
+  /**<@UsePageContextImports>**/
+}
+// import { useModalContext } from 'context/Modal/ModalContext';
+{
+  /**<@UsePageContextImports>**/
+}
+
 const SignIn = () => {
+  {
+    /**
+     Please don't delete this comment block.
+     Deleting this comment block will cause non-functionality of MyNative.
+     <@UsePageContext>
+     **/
+  }
+  // const context = useModalContext();
+  {
+    /**
+     Please don't delete this comment block.
+     Deleting this comment block will cause non-functionality of MyNative.
+     <@UsePageContext>
+     **/
+  }
+
   {
     /**
      Please don't delete this comment block.
