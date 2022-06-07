@@ -5,7 +5,7 @@ import ModalScreen from 'screens/ModalScreen';
 import * as React from 'react';
 import { AuthTabNavigator } from 'navigation/Auth';
 import { PortalTabNavigator } from 'navigation/Portal';
-import { Routes } from 'constants/routes';
+import { Routes } from 'navigation/routes';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 

@@ -3,13 +3,19 @@ import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/n
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 export type RootTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
+  Profile: undefined;
+  Settings: undefined;
+};
+
+export type AuthStackParamList = {
+  SignIn: undefined;
+  ForgottenPassword: undefined;
+  SignUp: undefined;
 };
 
 export type RootStackParamList = {
-  Root: NavigatorScreenParams<RootTabParamList> | undefined;
-  Portal: undefined;
+  Root: NavigatorScreenParams<AuthStackParamList> | undefined;
+  Portal: NavigatorScreenParams<RootTabParamList> | undefined;
   Modal: undefined;
   NotFound: undefined;
 };
@@ -23,10 +29,6 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>
 >;
-
-export type AuthStackParamList = {
-  SignIn: undefined;
-};
 
 declare global {
   // eslint-disable-next-line no-unused-vars

@@ -1,7 +1,7 @@
 module.exports = function (api) {
   api.cache(true);
   return {
-    presets: ['babel-preset-expo'],
+    presets: ['babel-preset-expo', 'module:metro-react-native-babel-preset'],
     plugins: [
       [
         'module-resolver',
@@ -16,6 +16,8 @@ module.exports = function (api) {
             styles: './src/styles',
             types: './src/types',
             utils: './src/utils',
+            components: './src/components',
+            theme: './src/theme',
           },
         },
       ],

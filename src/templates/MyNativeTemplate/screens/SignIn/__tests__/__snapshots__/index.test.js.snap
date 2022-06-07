@@ -1,13 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`homePage renders correctly 1`] = `
-<View
-  style={Object {}}
->
+exports[`signInTemplate renders correctly 1`] = `
+<View>
   <Text>
-    Footer
+    test
   </Text>
 </View>
 `;
-
-exports[`signIn renders correctly 1`] = `<View />`;

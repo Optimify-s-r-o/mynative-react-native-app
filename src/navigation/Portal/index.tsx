@@ -1,32 +1,29 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { RootTabParamList, RootTabScreenProps } from 'navigation/types';
-import useColorScheme from 'hooks/useColorScheme';
-import TabOneScreen from 'screens/TabOneScreen';
+import { RootTabParamList } from 'navigation/types';
 import { FontAwesome } from '@expo/vector-icons';
-import TabTwoScreen from 'screens/TabTwoScreen';
 import * as React from 'react';
-import { Routes } from 'constants/routes';
+import { Routes } from 'navigation/routes';
+import Profile from 'screens/Portal/Profile';
+import Settings from 'screens/Portal/Settings';
 
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
 export const PortalTabNavigator = () => {
-  const colorScheme = useColorScheme();
-
   return (
-    <BottomTab.Navigator initialRouteName={Routes.TabOne}>
+    <BottomTab.Navigator initialRouteName={Routes.Profile}>
       <BottomTab.Screen
-        name={Routes.TabOne}
-        component={TabOneScreen}
-        options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
-          title: 'Tab One',
+        name={Routes.Profile}
+        component={Profile}
+        options={() => ({
+          title: 'Profile',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         })}
       />
       <BottomTab.Screen
-        name={Routes.TabTwo}
-        component={TabTwoScreen}
+        name={Routes.Settings}
+        component={Settings}
         options={{
-          title: 'Tab Two',
+          title: 'Settings',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
@@ -34,9 +31,9 @@ export const PortalTabNavigator = () => {
   );
 };
 
-function TabBarIcon(props: {
+const TabBarIcon = (props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
-}) {
+}) => {
   return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
-}
+};
