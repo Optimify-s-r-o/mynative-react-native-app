@@ -2,18 +2,22 @@ import React from 'react';
 import { View, Text, TextInput as NativeTextInput, StyleSheet } from 'react-native';
 import { Control, FieldValues, FieldErrors, Path, Controller } from 'react-hook-form';
 
+type TextInputType = 'text' | 'password';
+
 export const TextInput = <T extends FieldValues>({
   control,
   name,
   label,
   description,
   errors,
+  type = 'text',
 }: {
   control: Control<T, any>;
   name: Path<T>;
   label: string;
   description?: string;
   errors?: FieldErrors<T>;
+  type?: TextInputType;
 }) => {
   return (
     <Controller
@@ -27,6 +31,7 @@ export const TextInput = <T extends FieldValues>({
             onChangeText={onChange}
             onBlur={onBlur}
             value={value}
+            secureTextEntry={type === 'password'}
           />
           {description && <Text style={styles.description}>{description}</Text>}
           {errors && errors[name] && <Text>{errors[name]}</Text>}

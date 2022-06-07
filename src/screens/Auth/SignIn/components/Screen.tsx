@@ -35,7 +35,13 @@ export const Screen = () => {
       <Text>SignIn</Text>
 
       <TextInput control={control} name="email" label="Email" errors={errors} />
-      <TextInput control={control} name="password" label="Password" errors={errors} />
+      <TextInput
+        control={control}
+        name="password"
+        label="Password"
+        errors={errors}
+        type="password"
+      />
       <Button title="Submit" onPress={handleSubmit(onSubmit)} />
 
       <Navigation to={Routes.SignUp} title={'SignUp'} />
