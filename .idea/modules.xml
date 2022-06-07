@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/doggies.iml" filepath="$PROJECT_DIR$/.idea/doggies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mynative-react-native-app.iml" filepath="$PROJECT_DIR$/.idea/mynative-react-native-app.iml" />
     </modules>
   </component>
 </project>

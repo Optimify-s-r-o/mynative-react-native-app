@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`homePage renders correctly 1`] = `
+<View
+  style={Object {}}
+>
+  <Text>
+    Footer
+  </Text>
+</View>
+`;

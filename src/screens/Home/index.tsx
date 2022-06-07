@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Text, View } from 'react-native';
-import { styles } from './styles';
+import {Screen} from "./../../screens/Home/components/Screen";
 
 export const HomePage = () => {
   {
@@ -15,7 +14,7 @@ export const HomePage = () => {
     /**
      Please don't delete this comment block.
      Deleting this comment block will cause non-functionality of MyNative.
-     <@MyNativeHooks/>
+     </@MyNativeHooks>
      **/
   }
 
@@ -26,27 +25,15 @@ export const HomePage = () => {
      <@MyNativeFunctions>
      **/
   }
-  const test = () => {};
+  const handleSubmit = () => {};
   {
     /**
      Please don't delete this comment block.
      Deleting this comment block will cause non-functionality of MyNative.
-     <@MyNativeFunctions/>
+     </@MyNativeFunctions>
      **/
   }
   return (
-    <View style={styles.container}>
-      {/**
-         Please don't delete this comment block.
-         Deleting this comment block will cause non-functionality of MyNative.
-         <@MyNativeView>
-          **/}
-      <Text>Open up App.tsx to start working on your app!</Text>
-      {/**
-             Please don't delete this comment block.
-             Deleting this comment block will cause non-functionality of MyNative.
-             <@MyNativeCore/>
-             **/}
-    </View>
+   <Screen/>
   );
 };

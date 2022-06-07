@@ -9,6 +9,7 @@
         "airbnb/hooks",
         "prettier",
         "prettier/react"
+
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
