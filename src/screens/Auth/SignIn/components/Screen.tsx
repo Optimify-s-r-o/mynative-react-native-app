@@ -5,7 +5,7 @@ import { Routes } from 'navigation/routes';
 import { Navigation } from 'screens/components/Navigation';
 import { useThemeContext } from 'context/Theme/ThemeContext';
 import { useForm } from 'react-hook-form';
-import { TextInput } from 'src/plugins/MyNativeForm/TextInput';
+import { TextInput } from 'plugins/MyNativeForm/TextInput';
 
 export const Screen = () => {
   const theme = useThemeContext();
