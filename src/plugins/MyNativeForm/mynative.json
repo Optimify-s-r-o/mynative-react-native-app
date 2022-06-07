@@ -1,0 +1,9 @@
+{
+  "name": "MyNativeForm",
+  "version": "1.0.0",
+  "source": [],
+  "dependencies": {
+    "react-hook-form": "^7.31.3"
+  },
+  "devDependencies": {}
+}
