@@ -1,18 +1,18 @@
-import {DarkTheme, DefaultTheme, NavigationContainer} from '@react-navigation/native';
+import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import * as React from 'react';
-import {ColorSchemeName} from 'react-native';
+import { ColorSchemeName } from 'react-native';
 import LinkingConfiguration from './LinkingConfiguration';
-import {RootNavigator} from "./Root";
+import { RootNavigator } from './Root';
 
-const Navigation = ({colorScheme}: { colorScheme: ColorSchemeName }) => {
-    return (<NavigationContainer
-        linking={LinkingConfiguration}
-        theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
+const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => {
+  return (
+    <NavigationContainer
+      linking={LinkingConfiguration}
+      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
     >
-        <RootNavigator/>
-    </NavigationContainer>);
-}
+      <RootNavigator />
+    </NavigationContainer>
+  );
+};
 
 export default Navigation;
-
-
