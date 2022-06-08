@@ -5,30 +5,54 @@ export const Colors = {
   light: 'white',
 };
 
-const baseContainerStyles = {
-  flex: 1,
-};
-
 const baseBoxStyles = {};
 
 export const lightStyleSheet = StyleSheet.create({
   container: {
-    ...baseContainerStyles,
-    backgroundColor: Colors.light,
+    flex: 1,
   },
   box: {
     ...baseBoxStyles,
-    borderColor: Colors.dark,
+  },
+  gridRow: {
+    flexDirection: 'row',
+  },
+  gridItem: {
+    width: '50%',
+  },
+  gridCenteredRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  gridSpaceBetween: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 });
 
 export const darkStyleSheet = StyleSheet.create({
   container: {
-    ...baseContainerStyles,
-    backgroundColor: Colors.dark,
+    flex: 1,
   },
   box: {
     ...baseBoxStyles,
-    borderColor: Colors.light,
+  },
+  gridRow: {
+    flexDirection: 'row',
+  },
+  gridItem: {
+    width: '50%',
+  },
+  gridCenteredRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  gridSpaceBetween: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 });
