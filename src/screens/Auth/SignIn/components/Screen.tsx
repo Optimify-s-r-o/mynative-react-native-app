@@ -16,12 +16,7 @@ export const Screen = () => {
 
   return (
     <View style={[theme.styleSheet.box, styles.container]}>
-      {/**
-         Please don't delete this comment block.
-         Deleting this comment block will cause non-functionality of MyNative.
-         <@MyNativeView>
-         **/}
-
+      {/**<@MyNativeView>**/}
       <Text>SignIn</Text>
 
       <Form
