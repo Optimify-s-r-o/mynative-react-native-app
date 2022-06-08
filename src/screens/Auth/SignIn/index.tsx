@@ -9,7 +9,7 @@ import { Screen } from './components/Screen';
   /**<@UsePageContextImports>**/
 }
 
-const SignIn = () => {
+export default () => {
   {
     /**
      Please don't delete this comment block.
@@ -60,4 +60,3 @@ const SignIn = () => {
   return <Screen />;
 };
 
-export default SignIn;

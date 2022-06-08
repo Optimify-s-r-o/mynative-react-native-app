@@ -9,7 +9,8 @@ const baseBoxStyles = {};
 
 export const lightStyleSheet = StyleSheet.create({
   container: {
-    backgroundColor: Colors.light,
+    flex: 1,
+    backgroundColor: '#fff',
   },
   box: {
     ...baseBoxStyles,
@@ -20,7 +21,10 @@ export const lightStyleSheet = StyleSheet.create({
   },
   gridItemHalf: {
     width: '50%',
-    backgroundColor: 'red',
+  },
+  gridCentered: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   gridCenteredRow: {
     flexDirection: 'row',
@@ -36,7 +40,8 @@ export const lightStyleSheet = StyleSheet.create({
 
 export const darkStyleSheet = StyleSheet.create({
   container: {
-    backgroundColor: Colors.dark,
+    flex: 1,
+    backgroundColor: '#fff',
   },
   box: {
     ...baseBoxStyles,
@@ -44,6 +49,10 @@ export const darkStyleSheet = StyleSheet.create({
   },
   gridRow: {
     flexDirection: 'row',
+  },
+  gridCentered: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   gridItemHalf: {
     width: '40%',

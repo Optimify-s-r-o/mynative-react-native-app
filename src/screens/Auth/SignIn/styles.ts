@@ -4,4 +4,7 @@ export const styles = StyleSheet.create({
   auth: {
     flexGrow: 1,
   },
+  forgotPassword: {
+    marginTop: 5,
+  },
 });

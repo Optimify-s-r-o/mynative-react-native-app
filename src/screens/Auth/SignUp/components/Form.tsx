@@ -19,28 +19,19 @@ export const Form = ({ control, handleSubmit }: { control: any; handleSubmit: ()
     navigator.navigate(to);
   };
   return (
-    <AuthLayout title={'Welcome to the World of Languages'} image={image}>
+    <AuthLayout title={'Create your account'} image={image}>
       <View style={styles.auth}>
         <TextInput name={'email'} control={control} label={'E-mail'} />
         <TextInput control={control} name={'password'} label="Password" type="password" />
 
-        <Submit title={'Sign in'} onPress={handleSubmit} />
-
-        {/** @EditableProperty(property: title, type: text) */}
-        {/** @EditableProperty(property: onPress, type: navigation) */}
-        <View style={[styleSheet.gridCenteredRow, styles.forgotPassword]}>
-          <TextButton
-            title="Forgotten password?"
-            onPress={() => navigateTo(Routes.ForgottenPassword)}
-          />
-        </View>
+        <Submit title={'Sign Up'} onPress={handleSubmit} />
       </View>
 
-      <View style={[, styleSheet.gridSpaceBetween]}>
+      <View style={styleSheet.gridSpaceBetween}>
         {/** @EditableProperty(property: title, type: text) */}
         {/** @EditableProperty(property: to, type: route) */}
         <View style={styleSheet.gridItem}>
-          <TextButton title="Sign Up" onPress={() => navigateTo(Routes.SignUp)} />
+          <TextButton title="Sign In" onPress={() => navigateTo(Routes.SignIn)} />
         </View>
         <View style={styleSheet.gridItem}>
           <TextButton title="Verification" onPress={() => navigateTo(Routes.SignUp)} />

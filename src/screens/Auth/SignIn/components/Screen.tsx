@@ -1,8 +1,6 @@
 import React from 'react';
-import { Button, Image, Text, View } from 'react-native';
-import { styles } from '../styles';
+
 import { Routes } from 'navigation/routes';
-import { Navigation } from 'screens/components/Navigation';
 import { useThemeContext } from 'context/Theme/ThemeContext';
 import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
@@ -10,6 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { Form } from './Form';
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { View } from 'react-native';
 
 export const Screen = () => {
   const theme = useThemeContext();
@@ -38,14 +37,8 @@ export const Screen = () => {
   });
 
   const signIn = () => {
-    navigator.navigate(Routes.Profile);
+    navigator.navigate(Routes.Portal);
   };
 
-  return (
-    <SafeAreaView style={[theme.styleSheet.container]}>
-      {/**<@MyNativeView>**/}
-      <Form control={control} handleSubmit={signIn} />
-      {/**<@MyNativeView/>**/}
-    </SafeAreaView>
-  );
+  return <Form control={control} handleSubmit={signIn} />;
 };

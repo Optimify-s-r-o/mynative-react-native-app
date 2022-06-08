@@ -1,7 +1,31 @@
 import React, { useState } from 'react';
 import { Screen } from './components/Screen';
 
-const Page = () => {
+{
+  /**<@UsePageContextImports>**/
+}
+// import { useModalContext } from 'context/Modal/ModalContext';
+{
+  /**<@UsePageContextImports>**/
+}
+
+export default () => {
+  {
+    /**
+     Please don't delete this comment block.
+     Deleting this comment block will cause non-functionality of MyNative.
+     <@UsePageContext>
+     **/
+  }
+  // const context = useModalContext();
+  {
+    /**
+     Please don't delete this comment block.
+     Deleting this comment block will cause non-functionality of MyNative.
+     <@UsePageContext>
+     **/
+  }
+
   {
     /**
      Please don't delete this comment block.
@@ -36,4 +60,3 @@ const Page = () => {
   return <Screen />;
 };
 
-export default Page;

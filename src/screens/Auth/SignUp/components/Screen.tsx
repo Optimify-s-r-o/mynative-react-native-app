@@ -1,27 +1,36 @@
-import { View, Text } from 'react-native';
 import React from 'react';
-import { styles } from '../styles';
-import { Navigation } from 'screens/components/Navigation';
+
 import { Routes } from 'navigation/routes';
+import * as yup from 'yup';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { Form } from './Form';
+import { useNavigation } from '@react-navigation/native';
 
 export const Screen = () => {
-  return (
-    <View style={styles.container}>
-      {/**
-         Please don't delete this comment block.
-         Deleting this comment block will cause non-functionality of MyNative.
-         <@MyNativeView>
-         **/}
-      <Text>SignUp</Text>
+  const navigator = useNavigation<any>();
 
-      <Navigation to={Routes.ForgottenPassword} title={'ForgottenPassword'} />
+  const { control } = useForm({
+    resolver: yupResolver(
+      yup
+        .object({
+          password: yup
+            .string()
+            .min(5, 'Password is to short')
+            .max(50, 'Password is to lomng')
+            .required('Required field'),
+          email: yup
+            .string()
+            .email('You must enter valid email address.')
+            .required('Required field'),
+        })
+        .required()
+    ),
+  });
 
-      <Navigation to={Routes.SignIn} title={'SignIn'} />
-      {/**
-         Please don't delete this comment block.
-         Deleting this comment block will cause non-functionality of MyNative.
-         <@MyNativeView/>
-         **/}
-    </View>
-  );
+  const signUp = () => {
+    navigator.navigate(Routes.SignIn);
+  };
+
+  return <Form control={control} handleSubmit={signUp} />;
 };
