@@ -1,11 +1,12 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Button, Image, Text, View } from 'react-native';
 import { styles } from '../styles';
 import { Routes } from 'navigation/routes';
 import { Navigation } from 'screens/components/Navigation';
 import { useThemeContext } from 'context/Theme/ThemeContext';
 import { TextInput } from 'plugins/MyNativeForm/components/TextInput';
 import { Form } from 'plugins/MyNativeForm/components/Form';
+import login from 'plugins/MyNativeForm/actions/login';
 
 export const Screen = () => {
   const theme = useThemeContext();
@@ -16,14 +17,25 @@ export const Screen = () => {
 
   return (
     <View style={[theme.styleSheet.box, styles.container]}>
-      {/**<@MyNativeView>**/}
+      {/**
+         Please don't delete this comment block.
+         Deleting this comment block will cause non-functionality of MyNative.
+         <@MyNativeView>
+         **/}
+
+      {/** @EditableProperty(property: source, type: asset) */}
+      <Image source={{ uri: '/no-image.png' }} />
+
+      {/** @EditableChildren(type: text) */}
       <Text>SignIn</Text>
 
       <Form
+        /** @EditableProperty(property: fields, type: formFields) */
         fields={{
           email: {
             default: '',
             render: (props) => (
+              /** @EditableProperty(property: label, type: text) */
               <TextInput
                 label="Email"
                 type="email"
@@ -42,6 +54,7 @@ export const Screen = () => {
           password: {
             default: '',
             render: (props) => (
+              /** @EditableProperty(property: label, type: text) */
               <TextInput
                 label="Password"
                 type="password"
@@ -51,10 +64,17 @@ export const Screen = () => {
             ),
           },
         }}
-        onSubmit={onSubmit}
+        /** @EditableProperty(property: onSubmit, type: formAction) */
+        onSubmit={(data) => login(data /*, apiContext, userContext*/)}
       />
 
-      <Navigation to={Routes.SignUp} title={'SignUp'} />
+      {/** @EditableProperty(property: title, type: text) */}
+      {/** @EditableProperty(property: onPress, type: navigation) */}
+      <Button title="Forgotten password" onPress={() => {}} />
+
+      {/** @EditableProperty(property: title, type: text) */}
+      {/** @EditableProperty(property: to, type: route) */}
+      <Navigation to={Routes.SignUp} title={'Sign up'} />
 
       <Navigation to={Routes.ForgottenPassword} title={'ForgottenPassword'} />
 
